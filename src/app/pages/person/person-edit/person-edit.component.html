@@ -1,0 +1,30 @@
+<form class="example-container" [formGroup]="form" #frmPerson="ngForm" (submit)="operate()">
+
+  <div [hidden]="true">
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="ID" required formControlName="idPerson">
+      </mat-form-field>
+  </div>
+
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="FirstName" minlength="3" required formControlName="firstName">
+      <small *ngIf="f['firstName'].errors?.['required'] && f['firstName'].touched" class="invalid">Is required</small>
+      <small *ngIf="f['firstName'].errors?.['minlength'] && f['firstName'].touched" class="invalid">Minlength is 3</small>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="LastName" minlength="3" required formControlName="lastName">
+      <small *ngIf="f['lastName'].errors?.['required'] && f['lastName'].touched" class="invalid">Is required</small>
+      <small *ngIf="f['lastName'].errors?.['minlength'] && f['lastName'].touched" class="invalid">Minlength is 3</small>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="frmPerson.invalid">
+      <mat-icon>done</mat-icon>
+      <span>Done</span>
+  </button>
+
+  <button mat-raised-button color="accent" type="button" routerLink="/pages/person">
+      <mat-icon>cancel</mat-icon>
+      <span>Cancel</span>
+  </button>
+</form>

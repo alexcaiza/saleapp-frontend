@@ -1,0 +1,45 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+/*
+.mat-column-idPatient {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 28% !important;
+  width: 28% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}*/
+
+.snackbar {
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 1rem !important;
+  padding: 10px !important;
+  background-color: green;
+  color: color;
+
+  .mat-button-wrapper {
+      color: black !important;
+  }
+}
+
+.mat-snack-bar-container {
+  max-width: 100% !important;
+}
